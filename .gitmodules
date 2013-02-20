@@ -16,3 +16,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/svndiff"]
+	path = bundle/svndiff
+	url = https://github.com/vim-scripts/svndiff.git
