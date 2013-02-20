@@ -22,6 +22,8 @@ colors elflord
 :nmap <C-n> :bnext<CR>
 :nmap <C-p> :bprev<CR>
 
+call pathogen#infect()
+
 "set backup
 "set backupdir=~/tmp/vim
 set directory=~/tmp/vim
