@@ -37,6 +37,7 @@ call pathogen#infect()
 " fancy powerline
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
 let g:Powerline_symbols = 'fancy'
+let g:Powerline_colorscheme = 'solarized256'
 
 "set backup
 "set backupdir=~/tmp/vim
