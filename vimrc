@@ -3,6 +3,11 @@ se et
 se sw=4
 se ai
 se cin
+
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs - powerline
+
 colors elflord
 
 " make j and k move logical-line-wise (wrapped), not physical line
@@ -28,6 +33,10 @@ call pathogen#infect()
 " plugin mappings
 :nmap ; :CtrlP<CR>
 :nmap \f :NERDTreeToggle<CR>
+
+" fancy powerline
+set guifont=Droid\ Sans\ Mono\ for\ Powerline
+let g:Powerline_symbols = 'fancy'
 
 "set backup
 "set backupdir=~/tmp/vim
