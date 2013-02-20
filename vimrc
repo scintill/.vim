@@ -21,8 +21,13 @@ colors elflord
 :nmap <C-e> :e#<CR> " return to last buffer
 :nmap <C-n> :bnext<CR>
 :nmap <C-p> :bprev<CR>
+:set hidden " allow dirty buffers
 
 call pathogen#infect()
+
+" plugin mappings
+:nmap ; :CtrlP<CR>
+:nmap \f :NERDTreeToggle<CR>
 
 "set backup
 "set backupdir=~/tmp/vim
