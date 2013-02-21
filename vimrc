@@ -1,3 +1,22 @@
+" bootstrap vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" plugins
+Bundle 'vim-scripts/CSApprox'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/svndiff'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-powerline'
+
+filetype plugin indent on
+
+" settings
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -5,14 +24,10 @@ set autoindent
 set cindent
 
 set directory=~/tmp/vim " get swap files out of working directories
-set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs - powerline
 
 set shell=/bin/bash " system() wasn't working with my fish shell, or even /bin/sh (dash)
-
-" load plugins
-call pathogen#infect()
 
 " colors and highlights
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
