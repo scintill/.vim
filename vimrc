@@ -14,6 +14,7 @@ set encoding=utf-8 " Necessary to show Unicode glyphs - powerline
 set shell=/bin/bash " system() wasn't working with my fish shell, or even /bin/sh (dash)
 
 " colors and highlights
+syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+\%#\@<!$/ containedin=ALL " highlight trailing ws, except when editing
 autocmd InsertLeave * redraw! " show when editing stops
@@ -28,7 +29,6 @@ sign define GitGutterLineModified        text=·  texthl=lineModified linehl=NON
 sign define GitGutterLineRemoved         text=𝂂  texthl=lineRemoved  linehl=NONE
 sign define GitGutterLineModifiedRemoved text=,  texthl=lineModified linehl=NONE
 
-syntax on
 colorscheme elflord
 highlight SignColumn guifg=Cyan guibg=#121212
 
