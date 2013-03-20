@@ -13,21 +13,20 @@ set encoding=utf-8 " Necessary to show Unicode glyphs - powerline
 
 set shell=/bin/bash " system() wasn't working with my fish shell, or even /bin/sh (dash)
 
-" colors and highlights
+" colors, highlights, signs
 syntax on
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+\%#\@<!$/ containedin=ALL " highlight trailing ws, except when editing
 autocmd InsertLeave * redraw! " show when editing stops
 
-let g:gitgutter_highlights=0
-autocmd ColorScheme * highlight lineAdded    guifg=#009900 guibg=#121212
-autocmd ColorScheme * highlight lineModified guifg=#bbbb00 guibg=#121212
-autocmd ColorScheme * highlight lineRemoved  guifg=#ff2222 guibg=#121212
-let g:gitgutter_signs=0
-sign define GitGutterLineAdded           text=·  texthl=lineAdded    linehl=NONE
-sign define GitGutterLineModified        text=·  texthl=lineModified linehl=NONE
-sign define GitGutterLineRemoved         text=𝂂  texthl=lineRemoved  linehl=NONE
-sign define GitGutterLineModifiedRemoved text=,  texthl=lineModified linehl=NONE
+autocmd ColorScheme * highlight GitGutterAdd    guifg=#009900 guibg=#121212
+autocmd ColorScheme * highlight GitGutterChange guifg=#bbbb00 guibg=#121212
+autocmd ColorScheme * highlight GitGutterDelete guifg=#ff2222 guibg=#121212
+autocmd ColorScheme * highlight link GitGutterChangeDelete GitGutterDelete
+let g:gitgutter_sign_added = '· '
+let g:gitgutter_sign_modified = '· '
+let g:gitgutter_sign_removed = '𝂂 '
+let g:gitgutter_sign_modified_removed = ', '
 
 colorscheme elflord
 highlight SignColumn guifg=Cyan guibg=#121212
@@ -65,9 +64,12 @@ let g:Powerline_colorscheme = 'solarized256'
 nmap <Leader>c :ToggleGitGutter<CR>
 nmap <Leader>cn :GitGutterNextHunk<CR>
 nmap <Leader>cp :GitGutterPrevHunk<CR>
+let g:gitgutter_diff_args_git = '-b'
+let g:gitgutter_diff_args_svn = '-b'
 
 " misc utils
 nmap <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
+nmap <Leader>p :set paste!<CR>
 
 
 " bootstrap vundle
@@ -84,5 +86,6 @@ Bundle 'scintill/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'rking/ag.vim'
 
 filetype plugin indent on
