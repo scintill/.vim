@@ -29,13 +29,13 @@ set numberwidth=3
 
 colorscheme elflord
 highlight SignColumn guifg=Cyan guibg=#121212
-highlight LineNr guifg=#303030 guibg=#000000
-highlight link CursorLineNr LineNr
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight LineNr guifg=#404040 guibg=#000000
+highlight! link CursorLineNr LineNr
+highlight ExtraWhitespace guibg=red
 highlight GitGutterAdd    guifg=#009900 guibg=#121212
 highlight GitGutterChange guifg=#bbbb00 guibg=#121212
 highlight GitGutterDelete guifg=#ff2222 guibg=#121212
-highlight link GitGutterChangeDelete GitGutterDelete
+highlight! link GitGutterChangeDelete GitGutterDelete
 
 " make j and k move logical-line-wise (wrapped), not physical line
 nmap j gj
