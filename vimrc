@@ -1,12 +1,19 @@
 " simple settings
 set nocompatible
+set nomodeline " I don't use modelines and would prefer not to use others' for now
+set backspace=indent,eol,start
 set tabstop=4
-set noexpandtab
 set shiftwidth=4
+set noexpandtab
 set autoindent
 set cindent
 set timeoutlen=350
 set formatoptions-=o " disable 'Automatically insert the current comment leader after hitting o in Normal mode.'
+set history=50
+
+" Suffixes that get lower priority when doing tab completion for filenames.
+" These are files we are not likely to want to edit or read.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 set directory=~/tmp/vim " get swap files out of working directories
 set laststatus=2   " Always show the statusline
@@ -58,11 +65,13 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
+noremap <C-c> <C-w>c
 " train to stop using these
 map <silent> <C-w>h :echo "Nope!"<CR>
 map <silent> <C-w>j :echo "Nope!"<CR>
 map <silent> <C-w>k :echo "Nope!"<CR>
 map <silent> <C-w>l :echo "Nope!"<CR>
+map <silent> <C-w>c :echo "Nope!"<CR>
 
 " ctrlp
 let g:ctrlp_map = ';'
@@ -83,26 +92,12 @@ nmap <Leader>cp :GitGutterPrevHunk<CR>
 let g:gitgutter_diff_args_git = '-w'
 let g:gitgutter_diff_args_svn = '-w'
 
-" misc utils
+" misc utils and shortcuts
 nmap <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
 nmap <Leader>p :set paste!<CR>
-
-" autocompletion
-" "Hacking Vim by Kim Shulz" via http://blogs.gnome.org/lharris/2008/07/20/code-completion-with-vim-7/
- function! SuperCleverTab()
-    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        if &omnifunc != ''
-            return "\<C-X>\<C-O>"
-        elseif &dictionary != ''
-            return "\<C-K>"
-        else
-            return "\<C-N>"
-        endif
-    endif
-endfunction
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+nnoremap <silent> <Leader>w :confirm write<CR>
+nmap <Tab> >>
+nmap <S-Tab> <<
 
 " bootstrap vundle
 filetype off
@@ -119,5 +114,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'rking/ag.vim'
+runtime macros/matchit.vim
 
 filetype plugin indent on
