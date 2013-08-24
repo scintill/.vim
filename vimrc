@@ -16,6 +16,8 @@ set history=50
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 set directory=~/tmp/vim " get swap files out of working directories
+set undofile " persistent undo history
+set undodir=~/tmp/vim
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs - powerline
 
