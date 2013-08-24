@@ -88,7 +88,7 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 " git-gutter
-nmap <Leader>c :ToggleGitGutter<CR>
+nmap <Leader>c :GitGutterToggle<CR>
 nmap <Leader>cn :GitGutterNextHunk<CR>
 nmap <Leader>cp :GitGutterPrevHunk<CR>
 let g:gitgutter_diff_args_git = '-w'
