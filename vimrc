@@ -100,6 +100,9 @@ nmap <Leader>p :set paste!<CR>
 nnoremap <silent> <Leader>w :confirm write<CR>
 nmap <Tab> >>
 nmap <S-Tab> <<
+inoremap <C-D> <C-R>=strftime("%c")<CR>
+nmap <Leader>n :set relativenumber!<CR>
+nnoremap <S-K> i<CR><Esc>k$|" sort of an opposite of S-J
 
 " bootstrap vundle
 filetype off
