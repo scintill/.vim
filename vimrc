@@ -119,6 +119,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'rking/ag.vim'
+Bundle 'vim-scripts/IndexedSearch'
 runtime macros/matchit.vim
 
 filetype plugin indent on
