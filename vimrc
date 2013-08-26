@@ -103,6 +103,13 @@ nmap <S-Tab> <<
 inoremap <C-D> <C-R>=strftime("%c")<CR>
 nmap <Leader>n :set relativenumber!<CR>
 nnoremap <S-K> i<CR><Esc>k$|" sort of an opposite of S-J
+" nerd-commenter mappings
+let g:NERDCreateDefaultMappings = 0
+let g:NERDMenuMode = 0
+map <unique> <Leader>cc <Plug>NERDCommenterToggle
+map <unique> <Leader>co <Plug>NERDCommenterComment
+map <unique> <Leader>ci <Plug>NERDCommenterUncomment
+
 
 " bootstrap vundle
 filetype off
@@ -119,7 +126,12 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/IndexedSearch'
+Bundle 'Raimondi/delimitMate'
+Bundle 'tpope/vim-eunuch'
 runtime macros/matchit.vim
 
 filetype plugin indent on
