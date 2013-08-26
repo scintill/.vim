@@ -39,7 +39,7 @@ set numberwidth=3
 colorscheme elflord
 highlight SignColumn guifg=Cyan guibg=#121212
 highlight LineNr guifg=#404040 guibg=#000000
-highlight! link CursorLineNr LineNr
+highlight CursorLineNr guifg=#404040 guibg=#000000
 highlight ExtraWhitespace guibg=red
 highlight GitGutterAdd    guifg=#009900 guibg=#121212
 highlight GitGutterChange guifg=#bbbb00 guibg=#121212
@@ -111,27 +111,35 @@ map <unique> <Leader>co <Plug>NERDCommenterComment
 map <unique> <Leader>ci <Plug>NERDCommenterUncomment
 
 
-" bootstrap vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+" for better safety, don't run plugins as root - I will try to stop running
+" vim as root anyway. everything above should be safe for root
+if system("whoami") != "root\n"
+	" bootstrap vundle
+	filetype off
+	set rtp+=~/.vim/bundle/vundle/
+	call vundle#rc()
+	Bundle 'gmarik/vundle'
 
-" plugins
-Bundle 'vim-scripts/CSApprox'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scintill/vim-gitgutter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'rking/ag.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-repeat'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-eunuch'
-runtime macros/matchit.vim
+	" plugins
+	Bundle 'vim-scripts/CSApprox'
+	Bundle 'kien/ctrlp.vim'
+	Bundle 'scrooloose/nerdtree'
+	Bundle 'scintill/vim-gitgutter'
+	Bundle 'scrooloose/syntastic'
+	Bundle 'tpope/vim-fugitive'
+	Bundle 'Lokaltog/vim-powerline'
+	Bundle 'rking/ag.vim'
+	Bundle 'tpope/vim-surround'
+	Bundle 'scrooloose/nerdcommenter'
+	Bundle 'tpope/vim-repeat'
+	Bundle 'vim-scripts/IndexedSearch'
+	Bundle 'Raimondi/delimitMate'
+	Bundle 'tpope/vim-eunuch'
+	runtime macros/matchit.vim
+else
+	" use snapshot elflord, plus red statusline as root warning
+	colorscheme elflord-256-snapshot
+	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
+endif
 
 filetype plugin indent on
