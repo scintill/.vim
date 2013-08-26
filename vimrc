@@ -55,25 +55,25 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap <Leader>h :set hlsearch!<CR>
+nmap <unique> <Leader>h :set hlsearch!<CR>
 
 " buffer nav
-nmap <C-e> <C-^>|" return to last buffer
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+nmap <unique> <C-e> <C-^>|" return to last buffer
+nmap <unique> <C-n> :bnext<CR>
+nmap <unique> <C-p> :bprev<CR>
 set hidden " allow dirty buffers
 " window nav
-noremap <C-h> <C-w>h
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-c> <C-w>c
+noremap <unique> <C-h> <C-w>h
+noremap <unique> <C-j> <C-w>j
+noremap <unique> <C-k> <C-w>k
+noremap <unique> <C-l> <C-w>l
+noremap <unique> <C-c> <C-w>c
 " train to stop using these
-map <silent> <C-w>h :echo "Nope!"<CR>
-map <silent> <C-w>j :echo "Nope!"<CR>
-map <silent> <C-w>k :echo "Nope!"<CR>
-map <silent> <C-w>l :echo "Nope!"<CR>
-map <silent> <C-w>c :echo "Nope!"<CR>
+map <silent> <unique> <C-w>h :echo "Nope!"<CR>
+map <silent> <unique> <C-w>j :echo "Nope!"<CR>
+map <silent> <unique> <C-w>k :echo "Nope!"<CR>
+map <silent> <unique> <C-w>l :echo "Nope!"<CR>
+map <silent> <unique> <C-w>c :echo "Nope!"<CR>
 
 " ctrlp
 let g:ctrlp_map = ';'
@@ -88,21 +88,21 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 " git-gutter
-nmap <Leader>c :GitGutterToggle<CR>
-nmap <Leader>cn :GitGutterNextHunk<CR>
-nmap <Leader>cp :GitGutterPrevHunk<CR>
+nmap <unique> <Leader>c :GitGutterToggle<CR>
+nmap <unique> <Leader>cn :GitGutterNextHunk<CR>
+nmap <unique> <Leader>cp :GitGutterPrevHunk<CR>
 let g:gitgutter_diff_args_git = '-w'
 let g:gitgutter_diff_args_svn = '-w'
 
 " misc utils and shortcuts
-nmap <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
-nmap <Leader>p :set paste!<CR>
-nnoremap <silent> <Leader>w :confirm write<CR>
-nmap <Tab> >>
-nmap <S-Tab> <<
-inoremap <C-D> <C-R>=strftime("%c")<CR>
-nmap <Leader>n :set relativenumber!<CR>
-nnoremap <S-K> i<CR><Esc>k$|" sort of an opposite of S-J
+nmap <unique> <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
+nmap <unique> <Leader>p :set paste!<CR>
+nnoremap <silent> <unique> <Leader>w :confirm write<CR>
+nmap <unique> <Tab> >>
+nmap <unique> <S-Tab> <<
+inoremap <unique> <C-D> <C-R>=strftime("%c")<CR>
+nmap <unique> <Leader>n :set relativenumber!<CR>
+nnoremap <unique> <S-K> i<CR><Esc>k$|" sort of an opposite of S-J
 " nerd-commenter mappings
 let g:NERDCreateDefaultMappings = 0
 let g:NERDMenuMode = 0
