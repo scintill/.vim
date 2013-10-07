@@ -9,7 +9,7 @@ set autoindent
 set cindent
 set timeoutlen=350
 set formatoptions-=o " disable 'Automatically insert the current comment leader after hitting o in Normal mode.'
-set history=50
+set history=1000
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 " These are files we are not likely to want to edit or read.
