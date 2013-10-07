@@ -55,7 +55,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap <unique> <Leader>h :set hlsearch!<CR>
+nmap <unique> <space> :nohlsearch<CR>
 
 " buffer nav
 nmap <unique> <C-e> <C-^>|" return to last buffer
