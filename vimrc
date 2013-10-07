@@ -8,7 +8,6 @@ set noexpandtab
 set autoindent
 set cindent
 set timeoutlen=350
-set formatoptions-=o " disable 'Automatically insert the current comment leader after hitting o in Normal mode.'
 set history=1000
 
 " Suffixes that get lower priority when doing tab completion for filenames.
@@ -145,4 +144,6 @@ else
 	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
 endif
 
+" vundle needed filetype off, so now enable and apply some customizations
 filetype plugin indent on
+autocmd FileType * set formatoptions-=o " disable 'Automatically insert the current comment leader after hitting o in Normal mode.'
