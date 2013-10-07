@@ -88,11 +88,14 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme = 'solarized256'
 
 " git-gutter
-nmap <unique> <Leader>c :GitGutterToggle<CR>
-nmap <unique> <Leader>cn :GitGutterNextHunk<CR>
-nmap <unique> <Leader>cp :GitGutterPrevHunk<CR>
-let g:gitgutter_diff_args_git = '-w'
+nmap <unique> <Leader>ct :GitGutterToggle<CR>
+nmap <unique> <Leader>cu :GitGutterAll<CR>
+nmap <unique> ]h <Plug>GitGutterNextHunk
+nmap <unique> [h <Plug>GitGutterPrevHunk
+let g:gitgutter_diff_args = '-w'
 let g:gitgutter_diff_args_svn = '-w'
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " misc utils and shortcuts
 nmap <unique> <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
