@@ -80,7 +80,7 @@ let g:ctrlp_map = ';'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'rw'
 
-nmap <Leader>f :NERDTreeToggle<CR>
+nmap <unique> <Leader>f :NERDTreeToggle<CR>
 
 " fancy powerline
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
@@ -133,8 +133,8 @@ if system("whoami") != "root\n"
 	Bundle 'scrooloose/nerdcommenter'
 	Bundle 'tpope/vim-repeat'
 	Bundle 'vim-scripts/IndexedSearch'
-	Bundle 'Raimondi/delimitMate'
 	Bundle 'tpope/vim-eunuch'
+	"Bundle 'tpope/vim-characterize'
 	runtime macros/matchit.vim
 else
 	" use snapshot elflord, plus red statusline as root warning
