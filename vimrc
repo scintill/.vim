@@ -104,7 +104,6 @@ nmap <unique> <Tab> >>
 nmap <unique> <S-Tab> <<
 inoremap <unique> <C-D> <C-R>=strftime("%c")<CR>
 nmap <unique> <Leader>n :set relativenumber!<CR>
-nnoremap <unique> <S-K> i<CR><Esc>k$|" sort of an opposite of S-J
 " nerd-commenter mappings
 let g:NERDCreateDefaultMappings = 0
 let g:NERDMenuMode = 0
@@ -112,6 +111,11 @@ map <unique> <Leader>cc <Plug>NERDCommenterToggle
 map <unique> <Leader>co <Plug>NERDCommenterComment
 map <unique> <Leader>ci <Plug>NERDCommenterUncomment
 
+" PIV
+let g:DisableAutoPHPFolding = 1
+let g:phpcomplete_complete_for_unknown_classes = 0
+let g:phpcomplete_parse_docblock_comments = 1
+let g:phpcomplete_cache_taglists = 1
 
 " for better safety, don't run plugins as root - I will try to stop running
 " vim as root anyway. everything above should be safe for root
@@ -138,6 +142,7 @@ if system("whoami") != "root\n"
 	Bundle 'tpope/vim-eunuch'
 	"Bundle 'tpope/vim-characterize'
 	runtime macros/matchit.vim
+	Bundle 'spf13/PIV'
 else
 	" use snapshot elflord, plus red statusline as root warning
 	colorscheme elflord-256-snapshot
