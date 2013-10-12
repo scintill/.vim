@@ -37,9 +37,11 @@ set numberwidth=3
 
 colorscheme elflord-custom
 
-" make j and k move logical-line-wise (wrapped), not physical line
-nmap j gj
-nmap k gk
+" make j and k move logical-line-wise (wrapped), not physical line. swap with g[jk] so I can have the default behavior too
+noremap <unique> j gj
+noremap <unique> k gk
+noremap <unique> gj j
+noremap <unique> gk k
 
 " better search
 set incsearch
