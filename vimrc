@@ -35,15 +35,7 @@ let g:gitgutter_sign_modified_removed = ', '
 set relativenumber
 set numberwidth=3
 
-colorscheme elflord
-highlight SignColumn guifg=Cyan guibg=#121212
-highlight LineNr guifg=#404040 guibg=#000000
-highlight CursorLineNr guifg=#404040 guibg=#000000
-highlight ExtraWhitespace guibg=red
-highlight GitGutterAdd    guifg=#009900 guibg=#121212
-highlight GitGutterChange guifg=#bbbb00 guibg=#121212
-highlight GitGutterDelete guifg=#ff2222 guibg=#121212
-highlight! link GitGutterChangeDelete GitGutterDelete
+colorscheme elflord-custom
 
 " make j and k move logical-line-wise (wrapped), not physical line
 nmap j gj
@@ -145,7 +137,7 @@ if system("whoami") != "root\n"
 	Bundle 'spf13/PIV'
 else
 	" use snapshot elflord, plus red statusline as root warning
-	colorscheme elflord-256-snapshot
+	colorscheme elflord-custom-CSAsnapshot
 	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
 endif
 

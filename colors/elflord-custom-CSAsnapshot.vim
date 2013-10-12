@@ -1,5 +1,5 @@
 " This scheme was created by CSApproxSnapshot
-" on Mon, 26 Aug 2013
+" on Fri, 11 Oct 2013
 
 hi clear
 if exists("syntax_on")
@@ -66,14 +66,13 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi Pl18005f8721268bd2N term=NONE cterm=NONE ctermbg=74 ctermfg=31 gui=NONE guibg=#268bd2 guifg=#005f87
     CSAHi Pl3d6c71c421268bd2N term=NONE cterm=NONE ctermbg=74 ctermfg=104 gui=NONE guibg=#268bd2 guifg=#6c71c4
     CSAHi Pl21268bd2eb073642N term=NONE cterm=NONE ctermbg=23 ctermfg=74 gui=NONE guibg=#073642 guifg=#268bd2
-    CSAHi ExtraWhitespace term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=#ff0000 guifg=fg
     CSAHi GitGutterAdd term=NONE cterm=NONE ctermbg=233 ctermfg=34 gui=NONE guibg=#121212 guifg=#009900
     CSAHi GitGutterChange term=NONE cterm=NONE ctermbg=233 ctermfg=184 gui=NONE guibg=#121212 guifg=#bbbb00
     CSAHi GitGutterDelete term=NONE cterm=NONE ctermbg=233 ctermfg=203 gui=NONE guibg=#121212 guifg=#ff2222
     CSAHi SpellRare term=reverse cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=#ff00ff
     CSAHi SpellLocal term=underline cterm=undercurl ctermbg=bg ctermfg=51 gui=undercurl guibg=bg guifg=fg guisp=#00ffff
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=201 ctermfg=fg gui=NONE guibg=#ff00ff guifg=fg
-    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=248 ctermfg=fg gui=NONE guibg=#a9a9a9 guifg=fg
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=233 ctermfg=248 gui=NONE guibg=#121212 guifg=#aaaaaa
+    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=59 ctermfg=255 gui=NONE guibg=#333333 guifg=#eeeeee
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=244 ctermfg=fg gui=NONE guibg=#808080 guifg=fg
     CSAHi PmenuThumb term=NONE cterm=NONE ctermbg=231 ctermfg=fg gui=NONE guibg=#ffffff guifg=fg
     CSAHi TabLine term=underline cterm=underline ctermbg=248 ctermfg=fg gui=underline guibg=#a9a9a9 guifg=fg
@@ -196,14 +195,13 @@ elseif has("gui_running") || (&t_Co == 256 && (&term ==# "xterm" || &term =~# "^
     CSAHi Pl18005f8721268bd2N term=NONE cterm=NONE ctermbg=75 ctermfg=31 gui=NONE guibg=#268bd2 guifg=#005f87
     CSAHi Pl3d6c71c421268bd2N term=NONE cterm=NONE ctermbg=75 ctermfg=147 gui=NONE guibg=#268bd2 guifg=#6c71c4
     CSAHi Pl21268bd2eb073642N term=NONE cterm=NONE ctermbg=24 ctermfg=75 gui=NONE guibg=#073642 guifg=#268bd2
-    CSAHi ExtraWhitespace term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=#ff0000 guifg=fg
     CSAHi GitGutterAdd term=NONE cterm=NONE ctermbg=233 ctermfg=40 gui=NONE guibg=#121212 guifg=#009900
     CSAHi GitGutterChange term=NONE cterm=NONE ctermbg=233 ctermfg=184 gui=NONE guibg=#121212 guifg=#bbbb00
     CSAHi GitGutterDelete term=NONE cterm=NONE ctermbg=233 ctermfg=203 gui=NONE guibg=#121212 guifg=#ff2222
     CSAHi SpellRare term=reverse cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=#ff00ff
     CSAHi SpellLocal term=underline cterm=undercurl ctermbg=bg ctermfg=51 gui=undercurl guibg=bg guifg=fg guisp=#00ffff
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=201 ctermfg=fg gui=NONE guibg=#ff00ff guifg=fg
-    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=248 ctermfg=fg gui=NONE guibg=#a9a9a9 guifg=fg
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=233 ctermfg=188 gui=NONE guibg=#121212 guifg=#aaaaaa
+    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=236 ctermfg=255 gui=NONE guibg=#333333 guifg=#eeeeee
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=244 ctermfg=fg gui=NONE guibg=#808080 guifg=fg
     CSAHi PmenuThumb term=NONE cterm=NONE ctermbg=255 ctermfg=fg gui=NONE guibg=#ffffff guifg=fg
     CSAHi TabLine term=underline cterm=underline ctermbg=248 ctermfg=fg gui=underline guibg=#a9a9a9 guifg=fg
@@ -326,14 +324,13 @@ elseif has("gui_running") || &t_Co == 256
     CSAHi Pl18005f8721268bd2N term=NONE cterm=NONE ctermbg=32 ctermfg=24 gui=NONE guibg=#268bd2 guifg=#005f87
     CSAHi Pl3d6c71c421268bd2N term=NONE cterm=NONE ctermbg=32 ctermfg=62 gui=NONE guibg=#268bd2 guifg=#6c71c4
     CSAHi Pl21268bd2eb073642N term=NONE cterm=NONE ctermbg=23 ctermfg=32 gui=NONE guibg=#073642 guifg=#268bd2
-    CSAHi ExtraWhitespace term=NONE cterm=NONE ctermbg=196 ctermfg=fg gui=NONE guibg=#ff0000 guifg=fg
     CSAHi GitGutterAdd term=NONE cterm=NONE ctermbg=233 ctermfg=28 gui=NONE guibg=#121212 guifg=#009900
     CSAHi GitGutterChange term=NONE cterm=NONE ctermbg=233 ctermfg=142 gui=NONE guibg=#121212 guifg=#bbbb00
     CSAHi GitGutterDelete term=NONE cterm=NONE ctermbg=233 ctermfg=196 gui=NONE guibg=#121212 guifg=#ff2222
     CSAHi SpellRare term=reverse cterm=undercurl ctermbg=bg ctermfg=201 gui=undercurl guibg=bg guifg=fg guisp=#ff00ff
     CSAHi SpellLocal term=underline cterm=undercurl ctermbg=bg ctermfg=51 gui=undercurl guibg=bg guifg=fg guisp=#00ffff
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=201 ctermfg=fg gui=NONE guibg=#ff00ff guifg=fg
-    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=248 ctermfg=fg gui=NONE guibg=#a9a9a9 guifg=fg
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=233 ctermfg=248 gui=NONE guibg=#121212 guifg=#aaaaaa
+    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=236 ctermfg=255 gui=NONE guibg=#333333 guifg=#eeeeee
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=244 ctermfg=fg gui=NONE guibg=#808080 guifg=fg
     CSAHi PmenuThumb term=NONE cterm=NONE ctermbg=231 ctermfg=fg gui=NONE guibg=#ffffff guifg=fg
     CSAHi TabLine term=underline cterm=underline ctermbg=248 ctermfg=fg gui=underline guibg=#a9a9a9 guifg=fg
@@ -456,14 +453,13 @@ elseif has("gui_running") || &t_Co == 88
     CSAHi Pl18005f8721268bd2N term=NONE cterm=NONE ctermbg=22 ctermfg=21 gui=NONE guibg=#268bd2 guifg=#005f87
     CSAHi Pl3d6c71c421268bd2N term=NONE cterm=NONE ctermbg=22 ctermfg=38 gui=NONE guibg=#268bd2 guifg=#6c71c4
     CSAHi Pl21268bd2eb073642N term=NONE cterm=NONE ctermbg=16 ctermfg=22 gui=NONE guibg=#073642 guifg=#268bd2
-    CSAHi ExtraWhitespace term=NONE cterm=NONE ctermbg=64 ctermfg=fg gui=NONE guibg=#ff0000 guifg=fg
     CSAHi GitGutterAdd term=NONE cterm=NONE ctermbg=16 ctermfg=20 gui=NONE guibg=#121212 guifg=#009900
     CSAHi GitGutterChange term=NONE cterm=NONE ctermbg=16 ctermfg=56 gui=NONE guibg=#121212 guifg=#bbbb00
     CSAHi GitGutterDelete term=NONE cterm=NONE ctermbg=16 ctermfg=64 gui=NONE guibg=#121212 guifg=#ff2222
     CSAHi SpellRare term=reverse cterm=undercurl ctermbg=bg ctermfg=67 gui=undercurl guibg=bg guifg=fg guisp=#ff00ff
     CSAHi SpellLocal term=underline cterm=undercurl ctermbg=bg ctermfg=31 gui=undercurl guibg=bg guifg=fg guisp=#00ffff
-    CSAHi Pmenu term=NONE cterm=NONE ctermbg=67 ctermfg=fg gui=NONE guibg=#ff00ff guifg=fg
-    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=84 ctermfg=fg gui=NONE guibg=#a9a9a9 guifg=fg
+    CSAHi Pmenu term=NONE cterm=NONE ctermbg=16 ctermfg=84 gui=NONE guibg=#121212 guifg=#aaaaaa
+    CSAHi PmenuSel term=NONE cterm=NONE ctermbg=80 ctermfg=87 gui=NONE guibg=#333333 guifg=#eeeeee
     CSAHi PmenuSbar term=NONE cterm=NONE ctermbg=83 ctermfg=fg gui=NONE guibg=#808080 guifg=fg
     CSAHi PmenuThumb term=NONE cterm=NONE ctermbg=79 ctermfg=fg gui=NONE guibg=#ffffff guifg=fg
     CSAHi TabLine term=underline cterm=underline ctermbg=84 ctermfg=fg gui=underline guibg=#a9a9a9 guifg=fg
