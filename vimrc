@@ -90,7 +90,11 @@ let g:gitgutter_eager = 0
 
 " misc utils and shortcuts
 nmap <unique> <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
-nmap <unique> <Leader>p :set paste!<CR>
+map <unique> <Leader><S-P> :set paste!<CR>
+map <unique> <Leader>p :put +<CR>
+map <unique> <Leader><Leader>p "+P
+map <unique> <Leader>x "+y
+
 nnoremap <silent> <unique> <Leader>w :confirm write<CR>
 nmap <unique> <Tab> >>
 nmap <unique> <S-Tab> <<
