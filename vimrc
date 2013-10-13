@@ -8,6 +8,7 @@ set noexpandtab
 set autoindent
 set cindent
 set timeoutlen=350
+set ttimeoutlen=75
 set history=1000
 
 " Suffixes that get lower priority when doing tab completion for filenames.
@@ -75,10 +76,20 @@ let g:ctrlp_working_path_mode = 'rw'
 
 nmap <unique> <Leader>f :NERDTreeToggle<CR>
 
-" fancy powerline
+" airline config - old powerline font
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_colorscheme = 'solarized256'
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols = {}
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+let g:airline_symbols.space = ' '
+let g:airline_theme = 'powerline_solarized256'
+let g:airline#extensions#default#layout = [['a', 'b', 'c', 'gap'], ['x', 'y', 'z', 'warning']]
+let g:airline_section_gap = '' " the section is meant to be empty so we can give it the dark highlight powerline did
 
 " git-gutter
 nmap <unique> <Leader>ct :GitGutterToggle<CR>
@@ -131,7 +142,7 @@ if system("whoami") != "root\n"
 	Bundle 'scintill/vim-gitgutter'
 	Bundle 'scrooloose/syntastic'
 	Bundle 'tpope/vim-fugitive'
-	Bundle 'Lokaltog/vim-powerline'
+	Bundle 'scintill/vim-airline'
 	Bundle 'rking/ag.vim'
 	Bundle 'tpope/vim-surround'
 	Bundle 'scrooloose/nerdcommenter'
