@@ -36,7 +36,7 @@ let g:gitgutter_sign_modified_removed = ', '
 set relativenumber
 set numberwidth=3
 
-colorscheme elflord-custom
+colorscheme elflord-custom-CSAsnapshot
 
 " make j and k move logical-line-wise (wrapped), not physical line. swap with g[jk] so I can have the default behavior too
 noremap <unique> j gj
@@ -137,7 +137,7 @@ if system("whoami") != "root\n"
 	Bundle 'gmarik/vundle'
 
 	" plugins
-	Bundle 'vim-scripts/CSApprox'
+	"Bundle 'vim-scripts/CSApprox'
 	Bundle 'kien/ctrlp.vim'
 	Bundle 'scrooloose/nerdtree'
 	Bundle 'scintill/vim-gitgutter'
@@ -154,8 +154,7 @@ if system("whoami") != "root\n"
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
 else
-	" use snapshot elflord, plus red statusline as root warning
-	colorscheme elflord-custom-CSAsnapshot
+	" add red statusline as root warning
 	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
 endif
 
