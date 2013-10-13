@@ -90,6 +90,7 @@ let g:airline_symbols.space = ' '
 let g:airline_theme = 'powerline_solarized256'
 let g:airline#extensions#default#layout = [['a', 'b', 'c', 'gap'], ['x', 'y', 'z', 'warning']]
 let g:airline_section_gap = '' " the section is meant to be empty so we can give it the dark highlight powerline did
+let g:airline#extensions#hunks#non_zero_only = 1
 
 " git-gutter
 nmap <unique> <Leader>ct :GitGutterToggle<CR>
