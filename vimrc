@@ -88,7 +88,7 @@ nmap <unique> [h <Plug>GitGutterPrevHunk
 let g:gitgutter_diff_args = '-w'
 let g:gitgutter_diff_args_svn = '-w'
 let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
+let g:gitgutter_eager = 1
 
 " misc utils and shortcuts
 nmap <unique> <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
