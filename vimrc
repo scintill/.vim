@@ -25,7 +25,7 @@ set shell=/bin/bash " system() wasn't working with my fish shell, or even /bin/s
 
 " colors, highlights, gutter columns
 syntax on
-autocmd Syntax * syn match ExtraWhitespace /\s\+\%#\@<!$/ containedin=ALL " highlight trailing ws, except when editing
+autocmd Syntax * syntax match ExtraWhitespace /\s\+\%#\@<!$/ containedin=ALL " highlight trailing ws, except when editing
 autocmd InsertLeave * redraw! " show when editing stops
 
 let g:gitgutter_sign_added = '· '
@@ -102,7 +102,7 @@ let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 1
 
 " misc utils and shortcuts
-nmap <unique> <Leader>s :%s/\s\+$//<CR>|" delete trailing whitespace
+nmap <unique> <silent> <Leader>s :%s/\s\+$//<CR>:nohlsearch<CR>|" delete trailing whitespace
 map <unique> <Leader><S-P> :set paste!<CR>
 map <unique> <Leader>p :put +<CR>
 map <unique> <Leader><Leader>p "+P

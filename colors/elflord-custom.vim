@@ -4,7 +4,8 @@ highlight SignColumn guifg=Cyan guibg=#121212
 highlight LineNr guifg=#404040 guibg=#000000
 highlight CursorLineNr guifg=#404040 guibg=#000000
 
-highlight link ExtraWhitespace Error
+highlight SoftError guibg=#262626 guifg=#5f0000
+highlight link ExtraWhitespace SoftError
 
 highlight GitGutterAdd    guifg=#009900 guibg=#121212
 highlight GitGutterChange guifg=#bbbb00 guibg=#121212
