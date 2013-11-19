@@ -104,6 +104,7 @@ let g:gitgutter_eager = 1
 
 " misc utils and shortcuts
 nmap <unique> <silent> <Leader>s :%s/\s\+$//<CR>:nohlsearch<CR>|" delete trailing whitespace
+nmap <unique> <silent> <Leader>h :syntax clear ExtraWhitespace<CR>
 map <unique> <Leader><S-P> :set paste!<CR>
 map <unique> <Leader>p :put +<CR>
 map <unique> <Leader><Leader>p "+P
