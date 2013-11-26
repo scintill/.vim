@@ -114,6 +114,8 @@ map <unique> <Leader>x "+y
 nnoremap <silent> <unique> <Leader>w :confirm write<CR>
 nmap <unique> <Tab> >>
 nmap <unique> <S-Tab> <<
+vmap <unique> <Tab> >
+vmap <unique> <S-Tab> <
 inoremap <unique> <C-D> <C-R>=strftime("%c")<CR>
 nmap <unique> <Leader>n :set relativenumber!<CR>
 " nerd-commenter mappings
