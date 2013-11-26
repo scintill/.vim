@@ -73,6 +73,7 @@ map <silent> <unique> <C-w>c :echo "Nope!"<CR>
 let g:ctrlp_map = ';'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_working_path_mode = 'rw'
+let g:ctrlp_match_window = 'results:20'
 
 nmap <unique> <Leader>f :NERDTreeToggle<CR>
 
