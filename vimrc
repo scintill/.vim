@@ -154,6 +154,7 @@ if system("whoami") != "root\n"
 	Bundle 'tpope/vim-repeat'
 	Bundle 'vim-scripts/IndexedSearch'
 	Bundle 'tpope/vim-eunuch'
+	Bundle 'elzr/vim-json'
 	"Bundle 'tpope/vim-characterize'
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
