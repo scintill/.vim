@@ -117,7 +117,36 @@ nmap <unique> <S-Tab> <<
 vmap <unique> <Tab> >
 vmap <unique> <S-Tab> <
 inoremap <unique> <C-D> <C-R>=strftime("%c")<CR>
-nmap <unique> <Leader>n :set relativenumber!<CR>
+
+" https://github.com/gpakosz/.vim/blob/vanilla/.vimrc#L115-L154
+" cycles between relative, hybrid, absolute, none
+function! RelativeNumberCycle()
+  if (&number == 1 && &relativenumber == 1)
+	silent set nonumber
+	silent set relativenumber relativenumber?
+  elseif (&number == 0 && &relativenumber == 1)
+	silent set norelativenumber
+	silent set number number?
+  elseif (&number == 1 && &relativenumber == 0)
+	silent set norelativenumber
+	silent set nonumber number?
+  else
+	silent set number
+	silent set relativenumber relativenumber?
+  endif
+endfunc
+function! NumberToggle()
+	if (&number || &relativenumber)
+		silent set nonumber
+		silent set norelativenumber
+	else
+		silent set nonumber
+		silent set relativenumber
+	endif
+endfunc
+nmap <silent> <unique> <Leader>n :call NumberToggle()<CR>
+nmap <silent> <unique> <Leader>m :call RelativeNumberCycle()<CR>
+
 " nerd-commenter mappings
 let g:NERDCreateDefaultMappings = 0
 let g:NERDMenuMode = 0
