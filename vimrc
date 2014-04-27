@@ -189,6 +189,7 @@ if system("whoami") != "root\n"
 	Bundle 'tpope/vim-eunuch'
 	Bundle 'elzr/vim-json'
 	"Bundle 'tpope/vim-characterize'
+	Bundle 'tpope/vim-markdown'
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
 else
