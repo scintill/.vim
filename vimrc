@@ -27,6 +27,10 @@ set shell=/bin/bash " system() wasn't working with my fish shell, or even /bin/s
 syntax on
 autocmd Syntax * syntax match ExtraWhitespace /\s\+\%#\@<!$/ containedin=ALL " highlight trailing ws, except when editing
 autocmd InsertLeave * redraw! " show when editing stops
+augroup HiglightTODO
+    autocmd!
+    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|FIXME\|XXX', -1)
+augroup END
 
 let g:gitgutter_sign_added = '· '
 let g:gitgutter_sign_modified = '· '
