@@ -23,6 +23,8 @@ let g:gitgutter_eager = 1
 
 autocmd FileType * set formatoptions-=o " disable 'Automatically insert the current comment leader after hitting o in Normal mode.'
 
+let g:syntastic_javascript_checkers = ['jshint']
+
 " http://vim.wikia.com/wiki/Improved_hex_editing
 " ex command for toggling hex mode
 command -bar Hexmode call ToggleHex()
