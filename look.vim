@@ -33,6 +33,35 @@ let g:airline#extensions#default#layout = [['a', 'b', 'c', 'gap'], ['x', 'y', 'z
 let g:airline_section_gap = '' " the section is meant to be empty so we can give it the dark highlight powerline did
 let g:airline#extensions#hunks#non_zero_only = 1
 
+" Bold the file name, but not the path.
+" This function derived from vim-powerline's GetFilepath()
+function! AirlineFiledir()
+	let dirsep = has('win32') && ! &shellslash ? '\' : '/'
+	let filepath = expand('%:p')
+
+	if empty(filepath)
+		return ''
+	endif
+
+	let ret = fnamemodify(filepath, ':~:.:h')
+
+	if ret == '.'
+		let ret = ''
+	else
+		let ret = ret . dirsep
+	endif
+
+	return ret
+endfunction
+function! s:AirlineInit()
+	call airline#parts#define_function('filedir', 'AirlineFiledir')
+	call airline#parts#define_raw('filetail', '%t%m')
+	call airline#parts#define_accent('filetail', 'bold')
+
+	let g:airline_section_c = airline#section#create(['%<', 'filedir', 'filetail', g:airline_symbols.space, 'readonly'])
+endfunction
+autocmd VimEnter * call s:AirlineInit()
+
 " PIV
 let g:DisableAutoPHPFolding = 1
 let g:phpcomplete_complete_for_unknown_classes = 0
