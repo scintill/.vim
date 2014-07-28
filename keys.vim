@@ -41,8 +41,10 @@ function! s:MapsInit()
 	nnoremap <silent> <unique> <Leader>w :confirm write<CR>
 	nmap <unique> <Tab> >>
 	nmap <unique> <S-Tab> <<
-	vmap <unique> <Tab> >
-	vmap <unique> <S-Tab> <
+	xmap <Tab> >
+	xmap <unique> <S-Tab> <
+	" xmap <Tab> was bound by snipmate, so rebind:
+	xmap <unique> <Leader><Tab> <Plug>snipMateVisual
 	inoremap <unique> <C-D> <C-R>=strftime("%c")<CR>
 
 	" https://github.com/gpakosz/.vim/blob/vanilla/.vimrc#L115-L154

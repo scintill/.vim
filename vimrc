@@ -32,6 +32,10 @@ if system("whoami") != "root\n"
 	Bundle 'tpope/vim-markdown'
 	Bundle 'eapache/rainbow_parentheses.vim'
 	Bundle 'Raimondi/delimitMate'
+	Bundle 'MarcWeber/vim-addon-mw-utils'
+	Bundle 'tomtom/tlib_vim'
+	Bundle 'garbas/vim-snipmate'
+	Bundle 'honza/vim-snippets'
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
 else
