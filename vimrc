@@ -36,6 +36,7 @@ if system("whoami") != "root\n"
 	Bundle 'tomtom/tlib_vim'
 	Bundle 'garbas/vim-snipmate'
 	Bundle 'honza/vim-snippets'
+	Bundle 'sjl/gundo.vim'
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
 else
