@@ -25,6 +25,9 @@ autocmd FileType * set formatoptions-=o " disable 'Automatically insert the curr
 
 let g:syntastic_javascript_checkers = ['jshint']
 
+" matchit puts <> into matchpairs, so explicitly here set to exclude that
+let delimitMate_matchpairs = "(:),[:],{:}"
+
 " http://vim.wikia.com/wiki/Improved_hex_editing
 " ex command for toggling hex mode
 command -bar Hexmode call ToggleHex()
