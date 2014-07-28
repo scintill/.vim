@@ -30,6 +30,7 @@ if system("whoami") != "root\n"
 	Bundle 'elzr/vim-json'
 	"Bundle 'tpope/vim-characterize'
 	Bundle 'tpope/vim-markdown'
+	Bundle 'eapache/rainbow_parentheses.vim'
 	Bundle 'Raimondi/delimitMate'
 	runtime macros/matchit.vim
 	Bundle 'spf13/PIV'
