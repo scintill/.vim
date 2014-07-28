@@ -1,8 +1,8 @@
 " make j and k move logical-line-wise (wrapped), not physical line. swap with g[jk] so I can have the default behavior too
-noremap <unique> j gj
-noremap <unique> k gk
-noremap <unique> gj j
-noremap <unique> gk k
+nnoremap <unique> j gj
+nnoremap <unique> k gk
+nnoremap <unique> gj j
+nnoremap <unique> gk k
 
 " better search
 set incsearch
