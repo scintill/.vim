@@ -54,11 +54,13 @@ function! AirlineFiledir()
 	return ret
 endfunction
 function! s:AirlineInit()
-	call airline#parts#define_function('filedir', 'AirlineFiledir')
-	call airline#parts#define_raw('filetail', '%t%m')
-	call airline#parts#define_accent('filetail', 'bold')
+	if exists('g:loaded_airline') && g:loaded_airline
+		call airline#parts#define_function('filedir', 'AirlineFiledir')
+		call airline#parts#define_raw('filetail', '%t%m')
+		call airline#parts#define_accent('filetail', 'bold')
 
-	let g:airline_section_c = airline#section#create(['%<', 'filedir', 'filetail', g:airline_symbols.space, 'readonly'])
+		let g:airline_section_c = airline#section#create(['%<', 'filedir', 'filetail', g:airline_symbols.space, 'readonly'])
+	endif
 endfunction
 autocmd VimEnter * call s:AirlineInit()
 
