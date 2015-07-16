@@ -17,17 +17,16 @@ set numberwidth=3
 
 colorscheme elflord-custom-CSAsnapshot
 
-" airline config - old powerline font
+" airline config - powerline font
 set guifont=Droid\ Sans\ Mono\ for\ Powerline
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline_symbols = {}
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline_symbols.space = ' '
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 let g:airline_theme = 'powerline_solarized256'
 let g:airline#extensions#default#layout = [['a', 'b', 'c', 'gap'], ['x', 'y', 'z', 'warning']]
 let g:airline_section_gap = '' " the section is meant to be empty so we can give it the dark highlight powerline did

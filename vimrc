@@ -31,14 +31,14 @@ if system("whoami") != "root\n"
 	"Bundle 'tpope/vim-characterize'
 	Bundle 'tpope/vim-markdown'
 	Bundle 'eapache/rainbow_parentheses.vim'
-	Bundle 'Raimondi/delimitMate'
+	"Bundle 'Raimondi/delimitMate'
 	Bundle 'MarcWeber/vim-addon-mw-utils'
 	Bundle 'tomtom/tlib_vim'
 	Bundle 'garbas/vim-snipmate'
 	Bundle 'honza/vim-snippets'
 	Bundle 'sjl/gundo.vim'
 	runtime macros/matchit.vim
-	Bundle 'spf13/PIV'
+	"Bundle 'spf13/PIV'
 else
 	" add red statusline as root warning
 	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
