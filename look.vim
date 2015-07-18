@@ -12,7 +12,9 @@ let g:gitgutter_sign_modified = '· '
 let g:gitgutter_sign_removed = '𝂂 '
 let g:gitgutter_sign_modified_removed = ', '
 
-set relativenumber
+if v:version >= 703
+       set relativenumber
+endif
 set numberwidth=3
 
 colorscheme elflord-custom-CSAsnapshot
