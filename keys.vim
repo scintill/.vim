@@ -5,7 +5,14 @@ let g:NERDMenuMode = 0
 " defer these, so <unique> will throw an error if a plugin binds them
 autocmd VimEnter * call s:MapsInit()
 function! s:MapsInit()
-	nmap <unique> <space> :nohlsearch<CR>
+	" http://stackoverflow.com/q/9054780 http://stackoverflow.com/a/16750393
+	" Space toggles search highlighting (or just turns off in older vims)
+	" The next search will automatically re-enable highlighting.
+	if exists('v:hlsearch')
+		nnoremap <unique> <silent> <space> :let v:hlsearch = 1 - v:hlsearch<CR>
+	else
+		nmap <unique> <space> :nohlsearch<CR>
+	endif
 
 	" buffer nav
 	nmap <unique> <C-e> <C-^>|" return to last buffer
