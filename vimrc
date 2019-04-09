@@ -42,6 +42,7 @@ if system("whoami") != "root\n"
 	"Bundle 'vim-scripts/HTML-AutoCloseTag'
 	runtime macros/matchit.vim
 	"Bundle 'spf13/PIV'
+	Bundle 'godlygeek/tabular'
 else
 	" add red statusline as root warning
 	highlight StatusLine term=bold cterm=bold ctermbg=9 ctermfg=15 gui=bold guibg=#ff0000 guifg=#ffffff
